@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <style>
-        body{
-            background-color: #002;
-            color: white;
-        }
-    </style> -->
-</head>
-<body>
-<h1>php and mysql</h1>
-
-   <?php
+<?php
   if(isset($_POST['AddSchool'])){
     //Array ( [BoardName] => Garys School [SchoolName] => Gary public shhcool [AddSchool] => Add School )
     $BoardName = $_POST['BoardName'];
@@ -31,5 +15,21 @@
     }
   }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add School</title>
+</head>
+<body>
+  <h1>Add a School</h1>
+
+  <form action="add.php" method="POST">
+    <input type="text" name="BoardName" placeholder="Board Name">
+    <input type="text" name="SchoolName" placeholder="School Name">
+    <input type="submit" value="Add School" name="AddSchool">
+  </form>
+
 </body>
 </html>
